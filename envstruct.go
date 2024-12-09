@@ -18,8 +18,8 @@ var (
 	TagKeyForValue        string = "env"
 	TagKeyForDefaultValue string = "default"
 
-	ErrStructStrconf  = errors.New("structenv")
-	ErrStructenvParse = errors.New("invalid structure err: structenv")
+	ErrStructStrconf  = errors.New("envstruct")
+	ErrStructenvParse = errors.New("invalid structure err: envstruct")
 )
 
 func Parse(s interface{}) error {

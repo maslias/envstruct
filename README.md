@@ -31,7 +31,7 @@ type WebConfig struct {
 
 type AppConfig struct {
 	Version    string
-Enviroment string `dev:"special_key"`
+Enviroment string `env:"special_key"`
 }
 
 cfg := Config{}

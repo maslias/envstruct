@@ -8,7 +8,7 @@ import (
 
 var (
 	errMsgEnv    string = "could not load env varliable with key: %s err: %w"
-	ErrEnvLookup        = errors.New("structenv-lookupenv")
+	ErrEnvLookup        = errors.New("envstruct-lookupenv")
 )
 
 func GetEnv(key string) (string, error) {
