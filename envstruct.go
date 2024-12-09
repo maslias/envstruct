@@ -56,7 +56,9 @@ func parseStruct(rv reflect.Value, pRsf reflect.StructField, buf bytes.Buffer) e
 		rvf := rv.Field(i)
 		rsf := rv.Type().Field(i)
 
-		parseStruct(rvf, rsf, buf)
+		if err := parseStruct(rvf, rsf, buf); err != nil {
+			return err
+		}
 	}
 	return nil
 }
@@ -95,7 +97,7 @@ func setEnvForStruct(rv reflect.Value, rsf reflect.StructField, buf bytes.Buffer
 		if err != nil {
 			return fmt.Errorf(
 				"could not convert key: %s msg: %s err: %w",
-				envVal,
+				envTag,
 				err.Error(),
 				ErrStructStrconf,
 			)
