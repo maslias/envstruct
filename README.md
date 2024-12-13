@@ -15,6 +15,8 @@ go get github.com/maslias/envstruct
 The following example shows how to use the Envstruct package.
 
 ```
+import "github.com/maslias/envstruct"
+
 type Config struct {
 	Web WebConfig
     App AppConfig
@@ -35,7 +37,7 @@ Enviroment string `env:"special_key"`
 }
 
 cfg := Config{}
-err := Parse(&cfg)
+err := envstruct.Parse(&cfg)
 
 ```
 
