@@ -106,3 +106,4 @@ Envstruct is heavily inspired by:
 ## License
 
 Maslias Envstruct is released under the [MIT License](https://github.com/maslias/envstruct/blob/master/LICENSE).
+
